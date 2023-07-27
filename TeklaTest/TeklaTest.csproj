@@ -197,7 +197,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EnumStringConverter.cs" />
-    <Compile Include="Services\NoGenericsConverter.cs" />
     <Compile Include="Services\PartProfileConverter.cs" />
     <Compile Include="Services\PartProfileSwitchConverter.cs" />
     <Compile Include="Services\StaticEnumConverter.cs" />

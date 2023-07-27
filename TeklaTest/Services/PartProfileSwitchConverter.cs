@@ -4,76 +4,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tekla.Extension.Services;
-
-public static class PartProfileSwitchConverter
+namespace Tekla.Extension.Services
 {
-
-    /// <summary>
-    /// Converts string to ProfileType.
-    /// </summary>
-    /// <param name="str">String value API is working with.</param>
-    /// <returns>May return -1 if the string is not supported in the ProfileType Enum</returns>
-    public static ProfileType GetProfileTypeFromString(string str)
+    public static class PartProfileSwitchConverter
     {
-        switch (str)
+
+        /// <summary>
+        /// Converts string to ProfileType.
+        /// </summary>
+        /// <param name="str">String value API is working with.</param>
+        /// <returns>May return -1 if the string is not supported in the ProfileType Enum</returns>
+        public static ProfileType GetProfileTypeFromString(string str)
         {
-            case "B":
-                return ProfileType.Plate;
-            case "I":
-                return ProfileType.Ibeam;
-            case "L":
-                return ProfileType.Angle;
-            case "U":
-                return ProfileType.Channel;
-            case "RU":
-                return ProfileType.RoundBar;
-            case "RO":
-                return ProfileType.RoundTube;
-            case "M":
-                return ProfileType.RectangularTube;
-            case "C":
-                return ProfileType.CFChannel;
-            case "T":
-                return ProfileType.Tbeam;
-            case "Z":
-                return ProfileType.Zbeam;
-            default:
-                return (ProfileType)(-1);
+            switch (str)
+            {
+                case "B":
+                    return ProfileType.Plate;
+                case "I":
+                    return ProfileType.Ibeam;
+                case "L":
+                    return ProfileType.Angle;
+                case "U":
+                    return ProfileType.Channel;
+                case "RU":
+                    return ProfileType.RoundBar;
+                case "RO":
+                    return ProfileType.RoundTube;
+                case "M":
+                    return ProfileType.RectangularTube;
+                case "C":
+                    return ProfileType.CFChannel;
+                case "T":
+                    return ProfileType.Tbeam;
+                case "Z":
+                    return ProfileType.Zbeam;
+                default:
+                    return (ProfileType)(-1);
+            }
         }
-    }
 
-    /// <summary>
-    /// Converts ProfileType back to string.
-    /// </summary>
-    /// <param name="profileType"></param>
-    /// <returns>String corresponding to Enum</returns>
-    public static string GetStringValueFromProfileType(ProfileType profileType)
-    {
-        switch (profileType)
+        /// <summary>
+        /// Converts ProfileType back to string.
+        /// </summary>
+        /// <param name="profileType"></param>
+        /// <returns>String corresponding to Enum</returns>
+        public static string GetStringValueFromProfileType(ProfileType profileType)
         {
-            case ProfileType.Plate:
-                return "B";
-            case ProfileType.Ibeam:
-                return "I";
-            case ProfileType.Angle:
-                return "L";
-            case ProfileType.Channel:
-                return "U";
-            case ProfileType.RoundBar:
-                return "RU";
-            case ProfileType.RoundTube:
-                return "RO";
-            case ProfileType.RectangularTube:
-                return "M";
-            case ProfileType.CFChannel:
-                return "C";
-            case ProfileType.Tbeam:
-                return "T";
-            case ProfileType.Zbeam:
-                return "Z";
-            default:
-                return "";
+            switch (profileType)
+            {
+                case ProfileType.Plate:
+                    return "B";
+                case ProfileType.Ibeam:
+                    return "I";
+                case ProfileType.Angle:
+                    return "L";
+                case ProfileType.Channel:
+                    return "U";
+                case ProfileType.RoundBar:
+                    return "RU";
+                case ProfileType.RoundTube:
+                    return "RO";
+                case ProfileType.RectangularTube:
+                    return "M";
+                case ProfileType.CFChannel:
+                    return "C";
+                case ProfileType.Tbeam:
+                    return "T";
+                case ProfileType.Zbeam:
+                    return "Z";
+                default:
+                    return "";
+            }
         }
     }
 }
